@@ -1,0 +1,24 @@
+.container-princ {
+    height: calc(100vh - 50px);
+}
+
+.nav {
+    height: 100%;
+    background-color: darkred;
+}
+
+.header {
+    height: 50px;
+    position: sticky;
+    background-color: darkblue;
+}
+
+.main {
+    height: calc(100% - 50px);
+    background-color: darkorange;
+}
+
+.footer {
+    height: 50px;
+    background-color: darkgreen;
+}
