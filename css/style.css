@@ -1,24 +1,168 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #666666;
+    font-size: 12px;
+    font-weight: 700;
+}
 .container-princ {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 75px);
+    overflow: hidden;
 }
 
+/* common */
+.white {
+    color: white;
+}
+
+.medium {
+    font-size: 15px;
+}
+
+/* barra navigazione laterale */
 .nav {
+    height: calc(100vh - 75px);
+    padding: 20px 20px 0px;
+    background-color: black;
+}
+
+.nav .min-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.nav .full-nav {
+    display: none;
     height: 100%;
-    background-color: darkred;
+    width: 100%;
+    position: relative;
+}
+
+@media screen and (min-width: 576px) {
+
+    .min-nav *{
+        display: none;
+    }
+
+    .nav .full-nav {
+        display: inline-block
+    }
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    margin: 5px 0;
+    vertical-align: middle;
+}
+
+.full-nav .logo {
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.full-nav #main-nav span {
+    margin-left: 5px;
+}
+
+#playlist {
+    margin-top: 25px;
+    height: 55%;
+}
+
+#playlist h4 {
+    text-transform: uppercase;
+}
+
+#playlist .new-playlist {
+    display: flex;
+    align-items: center;
+    margin: 15px 0 10px;
+}
+
+#playlist .plus {
+    width: 40px;
+    height: 40px;
+    background-color: #a3a3a3;
+    color: black;
+    line-height: 40px;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.container-playlist {
+    height: 70%;
+    overflow-y: auto;
+}
+
+.container-playlist * {
+    margin: 15px 0;
+}
+
+#nav-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    padding-bottom: 5px;
+}
+
+.installa {
+    font-size: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #666666;
+}
+
+.installa img {
+    width: 15px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.user {
+    margin-top: 10px;
+}
+
+.user-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #666666;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-align: center;
+}
+
+.user img {
+    width: 90%;
+}
+
+.user span {
+    margin-left: 5px;
+}
+
+@media screen and (max-height: 400px) {
+    #nav-footer {
+        display: none;
+    }    
 }
 
 .header {
-    height: 50px;
+    height: 75px;
     position: sticky;
     background-color: darkblue;
 }
 
 .main {
-    height: calc(100% - 50px);
+    height: calc(100% - 75px);
     background-color: darkorange;
 }
 
 .footer {
-    height: 50px;
+    height: 75px;
     background-color: darkgreen;
 }

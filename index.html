@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify</title>
@@ -13,11 +15,80 @@
     <div class="container-fluid">
 
         
-            <div class="row container-princ">
+        <div class="row container-princ">
 
                 <!-- colonna laterale: nav -->
                 <div class="col-xs-1 col-sm-4 col-md-3 col-lg-2">
-                    <div class="nav"></div>
+
+                    <div class="nav">
+
+                        <!-- visibile con width < 576 -->
+                        <div class="min-nav">
+                            <img src="img/logo-small.svg" alt="small logo spotify" class="nav-icon">
+                            <img src="img/home.svg" alt="home logo" class="nav-icon">
+                            <img src="img/search.svg" alt="search logo" class="nav-icon">
+                            <img src="img/libreria.svg" alt="library logo" class="nav-icon">
+                        </div>
+
+                        <!-- visibile con width > 576 -->
+                        <div class="full-nav">
+
+                            <section id="main-nav">
+                                <img src="img/logo.svg" alt="logo spotify" class="logo">
+
+                                <div class="home">
+                                    <img src="img/home.svg" alt="home logo" class="nav-icon">
+                                    <span>Home</span>
+                                </div>
+                            
+                                <div class="cerca">
+                                    <img src="img/search.svg" alt="search logo" class="nav-icon">
+                                    <span>Cerca</span>
+                                </div>
+
+                                <div class="libreria">
+                                    <img src="img/libreria.svg" alt="library logo" class="nav-icon">
+                                    <span>La tua libreria</span>
+                                </div>
+                            </section>
+
+                            <section id="playlist">
+                                <h4 class="white">Playlist</h4>
+
+                                <div class="new-playlist">
+                                    <div class="plus">+</div>
+                                    <span class="medium">Crea Playlist</span>
+                                </div>
+
+                                <div class="container-playlist">
+                                    <div>Nome Playlist</div>
+                                    <div>Nome Playlist</div>
+                                    <div>Nome Playlist</div>
+                                    <div>Nome Playlist</div>
+                                    <div>Nome Playlist</div>
+                                    <div>Nome Playlist</div>
+                                    <div>Nome Playlist</div>
+                                </div>
+
+                            </section>
+
+                            <section id="nav-footer">
+
+                                <div class="installa">
+                                <img src="img/download.svg" alt="download icon">
+                                <span>Installa app</span>
+                                </div>
+
+                                <div class="user">
+                                    <div class="user-icon">
+                                        <img src="img/profile.svg" alt="user icon">
+                                    </div>
+                                    <span class="white">John Doe</span>
+                                </div>
+                            </section>
+                            
+                        </div>
+                    </div>
                 </div>
 
                 <!-- sezione principale con header e main -->
@@ -34,16 +105,16 @@
 
                     <div class="main">
                         <div class="row">
-                        
+
                             <div class="col-xs-12">
                             </div>
-                        
+
                         </div>
                     </div>
                 </div>
-            </div>
+        </div>
         
-
+        <!-- footer -->
         <div class="row">
 
             <div class="col-xs-12">
