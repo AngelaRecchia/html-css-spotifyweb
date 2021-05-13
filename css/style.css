@@ -243,6 +243,10 @@ body {
     padding: 20px 0;
 }
 
+.main .sect-title div {
+    margin-top: 10px;
+}
+
 .main section > .row {
     margin-top: 15px;
 }
@@ -280,6 +284,10 @@ body {
 
 .text-alb div {
     margin-top: 10px;
+}
+
+#popolari img {
+    border-radius: 50%;
 }
 
 .footer {
