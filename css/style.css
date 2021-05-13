@@ -24,12 +24,6 @@ body {
     overflow: hidden;
 }
 
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /* barra navigazione laterale */
 .nav {
     height: calc(100vh - 75px);
@@ -61,19 +55,6 @@ body {
     height: 100%;
     width: 100%;
     overflow: hidden;
-}
-
-@media screen and (min-width: 576px) {
-
-    .min-nav, .min-nav *{
-        display: none;
-    }
-
-    .nav .full-nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
 }
 
 .up {
@@ -290,7 +271,91 @@ body {
     border-radius: 50%;
 }
 
+/* footer */
+
 .footer {
     height: 75px;
-    background-color: darkgreen;
+    background-color: #282828;
+    color: #a3a3a3;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.footer .left, .footer .right {
+    flex-basis: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .playing {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.footer .playing img {
+    width: 40px;
+    margin-right: 5px;
+}
+
+.song-name {
+    font-size: 10px;
+}
+
+.middle {
+    flex-shrink: 1;
+    flex-basis: calc(70% - 20px);
+    min-width: 100px;
+    height: 30px;
+    background-color: #fff;
+}
+
+.right i {
+    margin-right: 5px;
+    color: white;
+}
+
+.bar {
+    min-width: 30px;
+    width: 70%;
+    height: 2px;
+    background-color: #666666;
+    border-radius: 10px;
+    position: relative;
+}
+
+.light-bar {
+    background-color: #a3a3a3;
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+
+}
+
+/* media queries */
+@media screen and (min-width: 576px) {
+
+    .min-nav, .min-nav *{
+        display: none;
+    }
+
+    .nav .full-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .playing, .right {
+        flex-shrink: 0;
+    }
+
+    .right i {
+        margin-right: 15px;
+    }
 }
