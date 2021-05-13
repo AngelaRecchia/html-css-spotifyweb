@@ -2,7 +2,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .clearfix::after {
@@ -198,7 +198,7 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
     
     /* flex-shrink: 0; */
 }
@@ -223,6 +223,7 @@ body {
     margin-top: 75px;
     height: calc(100% - 75px);
     color: #a3a3a3;
+    padding: 20px;
     overflow-y: auto;
 }
 
@@ -238,20 +239,41 @@ body {
     padding: 20px;
 }
 
+.main section h2 {
+    margin: 20px 0;
+}
+
+.main section h3 {
+    color: white;
+    margin: 10px 0;
+}
+
 .main section .row {
     flex-wrap: wrap;
 }
 
-.main section .row > * {
-    padding: 10px;
-}
-
 .item {
-    height: 100px;
     width: 100%;
-    background-color: darkred;
+    margin-top: 10px;
 }
 
+.item-content {
+    width: 95%;
+}
+
+.copertina {
+    width: 100%;
+}
+
+.copertina img {
+    width: 100%;
+}
+
+.text-alb {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+}
 .footer {
     height: 75px;
     background-color: darkgreen;
