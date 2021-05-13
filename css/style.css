@@ -239,13 +239,16 @@ body {
     padding: 20px;
 }
 
-.main section h2 {
-    margin: 20px 0;
+.main section {
+    padding: 20px 0;
+}
+
+.main section > .row {
+    margin-top: 15px;
 }
 
 .main section h3 {
     color: white;
-    margin: 10px 0;
 }
 
 .main section .row {
@@ -271,9 +274,14 @@ body {
 
 .text-alb {
     width: 95%;
-    margin: auto;
+    margin: 10px auto 0;
     text-align: center;
 }
+
+.text-alb div {
+    margin-top: 10px;
+}
+
 .footer {
     height: 75px;
     background-color: darkgreen;
