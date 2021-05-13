@@ -203,10 +203,15 @@ body {
 
 /* sezione principale */
 
+#main-content {
+    height: calc(100vh - 75px);
+}
+
 .main {
     background-color: #141922;
     height: calc(100% - 75px);
     color: #a3a3a3;
+    overflow-y: auto;
 }
 
 .main .sezioni {
@@ -223,7 +228,6 @@ body {
 
 .main section .row {
     flex-wrap: wrap;
-    justify-content: space-evenly;
 }
 
 .main section .row > * {
