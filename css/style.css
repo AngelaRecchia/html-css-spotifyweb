@@ -36,7 +36,7 @@ body {
     display: none;
     height: 100%;
     width: 100%;
-    position: relative;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 576px) {
@@ -46,10 +46,21 @@ body {
     }
 
     .nav .full-nav {
-        display: inline-block
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 
+.up {
+    max-height: calc(100% - 70px);
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.bottom {
+    height: 70px;
+}
 .nav-icon {
     width: 20px;
     height: 20px;
@@ -68,7 +79,8 @@ body {
 
 #playlist {
     margin-top: 25px;
-    height: 55%;
+    height: 60%;
+    overflow: hidden;
 }
 
 #playlist h4 {
@@ -94,7 +106,7 @@ body {
 }
 
 .container-playlist {
-    height: 70%;
+    height: 60%;
     overflow-y: auto;
 }
 
@@ -104,10 +116,7 @@ body {
 
 #nav-footer {
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    background-color: black;
-    padding-bottom: 5px;
+    padding-top: 10px;
 }
 
 .installa {
@@ -143,12 +152,6 @@ body {
 
 .user span {
     margin-left: 5px;
-}
-
-@media screen and (max-height: 400px) {
-    #nav-footer {
-        display: none;
-    }    
 }
 
 .header {
