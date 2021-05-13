@@ -24,6 +24,20 @@ body {
     overflow: hidden;
 }
 
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.just-center {
+    display: flex;
+    justify-content: center;
+}
+
+.just-between {
+    display: flex;
+    justify-content: space-between;
+}
 /* barra navigazione laterale */
 .nav {
     height: calc(100vh - 75px);
@@ -180,7 +194,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    
+
     /* flex-shrink: 0; */
 }
 
@@ -278,17 +292,12 @@ body {
     background-color: #282828;
     color: #a3a3a3;
     padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
-
 .footer .left, .footer .right {
-    flex-basis: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    width: 15%;
+    min-width: min-content;
+    flex-shrink: 0;
 }
 
 .footer .playing {
@@ -307,11 +316,20 @@ body {
 }
 
 .middle {
-    flex-shrink: 1;
-    flex-basis: calc(70% - 20px);
-    min-width: 100px;
-    height: 30px;
-    background-color: #fff;
+    width: 40%;
+    margin: 0 10px;
+}
+
+.middle .time {
+    width: 100%;
+}
+
+.middle .bar {
+    width: 80%;
+}
+.middle .time span {
+    font-size: 10px;
+    color: white;
 }
 
 .right i {
@@ -320,18 +338,19 @@ body {
 }
 
 .bar {
-    min-width: 30px;
     width: 70%;
-    height: 2px;
+    min-width: 30px;
+    height: 3px;
     background-color: #666666;
     border-radius: 10px;
     position: relative;
+    margin: 0 5px;
 }
 
 .light-bar {
     background-color: #a3a3a3;
     width: 30%;
-    height: 2px;
+    height: 100%;
     position: absolute;
     border-radius: 10px;
     left: 0;
@@ -349,10 +368,6 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-
-    .playing, .right {
-        flex-shrink: 0;
     }
 
     .right i {
