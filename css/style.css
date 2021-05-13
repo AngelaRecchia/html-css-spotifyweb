@@ -1,21 +1,28 @@
+/* common */
 body {
     font-family: 'Montserrat', sans-serif;
     color: #666666;
     font-size: 12px;
     font-weight: 700;
 }
-.container-princ {
-    height: calc(100vh - 75px);
-    overflow: hidden;
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-/* common */
 .white {
     color: white;
 }
 
 .medium {
     font-size: 15px;
+}
+
+.container-princ {
+    height: calc(100vh - 75px);
+    overflow: hidden;
 }
 
 /* barra navigazione laterale */
@@ -26,11 +33,22 @@ body {
 }
 
 .nav .min-nav {
+    height: 100%;
+}
+
+.min-nav .cont-min-nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.min-nav .bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 
 .nav .full-nav {
     display: none;
@@ -41,7 +59,7 @@ body {
 
 @media screen and (min-width: 576px) {
 
-    .min-nav *{
+    .min-nav, .min-nav *{
         display: none;
     }
 
@@ -61,6 +79,7 @@ body {
 .bottom {
     height: 70px;
 }
+
 .nav-icon {
     width: 20px;
     height: 20px;
@@ -79,7 +98,7 @@ body {
 
 #playlist {
     margin-top: 25px;
-    height: 60%;
+    height: 80%;
     overflow: hidden;
 }
 
@@ -119,14 +138,17 @@ body {
     padding-top: 10px;
 }
 
-.installa {
+.installa img {
+    width: 15px;
+}
+
+.full-nav .installa {
     font-size: 10px;
     padding-bottom: 5px;
     border-bottom: 1px solid #666666;
 }
 
-.installa img {
-    width: 15px;
+.full-nav .installa img {
     vertical-align: middle;
     margin-right: 5px;
 }
@@ -154,10 +176,29 @@ body {
     margin-left: 5px;
 }
 
+/* header */
+
 .header {
+    background-color: #080b12;
     height: 75px;
     position: sticky;
-    background-color: darkblue;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header .row {
+    flex-shrink: 0;
+}
+
+.upgrade {
+    font-weight: 400;
+    margin-right: 10px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 1px solid white;
+    border-radius: 20px;
 }
 
 .main {
