@@ -19,11 +19,6 @@ body {
     font-size: 15px;
 }
 
-.container-princ {
-    height: calc(100vh - 75px);
-    overflow: hidden;
-}
-
 .align-center {
     display: flex;
     align-items: center;
@@ -38,10 +33,16 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+.container-princ {
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
 /* barra navigazione laterale */
 .nav {
     width: 50px;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 80px);
     padding: 20px 20px 0px;
     background-color: black;
     color: #666666;
@@ -73,7 +74,7 @@ body {
 }
 
 .up {
-    max-height: calc(100% - 70px);
+    max-height: calc(100% - 80px);
     min-height: 300px;
     overflow: hidden;
 }
@@ -182,7 +183,7 @@ body {
 
 .header {
     background-color: rgba(0,0,0,0.5);
-    height: 75px;
+    height: 80px;
     width: calc(100% - 50px);
     position: fixed;
     right: 0;
@@ -209,12 +210,12 @@ body {
 /* sezione principale */
 
 #main-content {
-    height: calc(100vh - 75px);
+    height: calc(100vh - 80px);
     background-color: #141922;
 }
 
 .main {
-    padding: 75px 20px 20px;
+    padding: 80px 20px 20px;
     height: 100%;
     color: #a3a3a3;
     overflow-y: auto;
@@ -286,14 +287,28 @@ body {
 /* footer */
 
 .footer {
-    height: 75px;
+    height: 80px;
     background-color: #282828;
     color: #a3a3a3;
     padding: 10px;
 }
 
+.footer i {
+    font-size: 13px;
+}
+
+.footer .left .icons {
+    width: 20%;
+    flex-wrap: wrap;
+}
+
+.footer .left .icons > * {
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
 .footer .left, .footer .right {
-    width: 15%;
+    width: 17%;
     min-width: min-content;
     flex-shrink: 0;
 }
@@ -301,12 +316,14 @@ body {
 .footer .playing {
     display: flex;
     align-items: center;
-    margin-right: 30px;
+    width: 80%;
+    min-width: min-content;
+    margin-right: 20px;
 }
 
 .footer .playing img {
-    width: 40px;
-    margin-right: 5px;
+    width: 50px;
+    margin-right: 10px;
 }
 
 .song-name {
@@ -316,6 +333,21 @@ body {
 .middle {
     width: 40%;
     margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.player {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.player * {
+    margin: 0 10px;
+}
+
+.player #play {
+    font-size: 30px;
 }
 
 .middle .time {
@@ -323,21 +355,28 @@ body {
 }
 
 .middle .bar {
-    width: 80%;
+    width: 90%;
 }
+
 .middle .time span {
     font-size: 10px;
     color: white;
 }
 
+.right {
+    margin-left: 5px
+}
+.right i, .middle i {
+    color: white;
+}
+
 .right i {
     margin-right: 5px;
-    color: white;
 }
 
 .bar {
     width: 70%;
-    min-width: 30px;
+    min-width: 60px;
     height: 3px;
     background-color: #666666;
     border-radius: 10px;
