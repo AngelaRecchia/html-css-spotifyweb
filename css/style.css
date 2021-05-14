@@ -43,10 +43,6 @@ body {
     justify-content: flex-end;
 }
 
-.container-fluid {
-    min-width: 475px;
-}
-
 .container-princ {
     height: calc(100vh - 80px);
     overflow: hidden;
@@ -318,7 +314,7 @@ body {
 }
 
 .player * {
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .player #play {
@@ -341,6 +337,7 @@ body {
 .right {
     margin-left: 5px
 }
+
 .right i, .middle i {
     color: white;
 }
@@ -388,6 +385,10 @@ body {
 
     .header {
         width: calc(100% - 230px);
+    }
+
+    .player * {
+        margin: 0 10px;
     }
 
     .right i {
