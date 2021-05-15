@@ -68,11 +68,11 @@ body {
 .nav .up {
     max-height: calc(100% - 70px);
     min-height: 300px;
-    overflow: hidden;
 }
 
 .nav .bottom {
     height: 70px;
+    background-color: black;
 }
 
 .nav-icon {
@@ -80,6 +80,15 @@ body {
     height: 20px;
     margin: 5px 0;
     vertical-align: middle;
+    cursor: pointer;
+}
+
+.grey-icon {
+    filter: sepia(0%) saturate(1731%) hue-rotate(135deg) brightness(106%) contrast(65%);
+}
+
+.grey-icon:hover {
+    filter: none;
 }
 
 .full-nav .logo {
@@ -91,6 +100,22 @@ body {
     margin-left: 5px;
 }
 
+.full-nav #main-nav div:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.full-nav #main-nav div:hover .grey-icon {
+    filter: none;
+}
+
+.home {
+    margin-left: -20px;
+    border-left: 2px solid #adff2f;
+    padding-left: 18px;
+    color: white;
+}
+
 #playlist {
     margin-top: 25px;
     height: 80%;
@@ -99,10 +124,12 @@ body {
 
 #playlist h4 {
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 #playlist .new-playlist {
     margin: 15px 0 10px;
+    cursor: pointer;
 }
 
 #playlist .plus {
@@ -117,13 +144,27 @@ body {
     margin-right: 10px;
 }
 
+#playlist .new-playlist:hover .plus {
+    background-color: white;
+}
+
+#playlist .new-playlist:hover {
+    color: white;
+}
+
 .container-playlist {
     height: 60%;
+    list-style: none;
     overflow-y: auto;
 }
 
-.container-playlist * {
+.container-playlist li {
     margin: 15px 0;
+    cursor: pointer;
+}
+
+.container-playlist li:hover {
+    color: white;
 }
 
 #nav-footer {
@@ -132,6 +173,11 @@ body {
 
 .installa img {
     width: 15px;
+}
+
+.installa:hover {
+    color: white;
+    cursor: pointer;
 }
 
 .full-nav .installa {
