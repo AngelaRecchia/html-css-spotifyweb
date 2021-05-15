@@ -40,6 +40,7 @@ body {
 }
 
 .just-end {
+    display: flex;
     justify-content: flex-end;
 }
 
@@ -175,8 +176,9 @@ body {
     width: 15px;
 }
 
-.installa:hover {
+.installa:hover, .installa:hover .grey-icon {
     color: white;
+    filter: none;
     cursor: pointer;
 }
 
@@ -374,6 +376,10 @@ body {
     margin-right: 5px;
 }
 
+.footer .icons > *:hover {
+    color:  white;
+}
+
 .footer .left {
     flex-basis: 20%;
 }
@@ -397,6 +403,12 @@ body {
     font-size: 10px;
 }
 
+.song-name:hover {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .middle {
     width: 40%;
     margin: 0 10px;
@@ -411,10 +423,15 @@ body {
 
 .player * {
     margin: 0 5px;
+    cursor: pointer;
 }
 
 .player #play {
     font-size: 30px;
+}
+
+.player #play:hover {
+    transform: scale(1.1);
 }
 
 .middle .time {
@@ -440,6 +457,7 @@ body {
 
 .right i {
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .bar {
@@ -450,6 +468,7 @@ body {
     border-radius: 10px;
     position: relative;
     margin: 0 5px;
+    cursor: pointer;
 }
 
 .light-bar {
@@ -459,7 +478,23 @@ body {
     position: absolute;
     border-radius: 10px;
     left: 0;
+}
 
+.circle {
+    display: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    
+}
+
+.bar:hover .circle {
+    display: inline-block;
+}
+
+.bar:hover .light-bar {
+    background-color: #adff2f;
 }
 
 /* media queries */
