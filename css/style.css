@@ -5,6 +5,15 @@ body {
     font-weight: 600;
 }
 
+.container-playlist::-webkit-scrollbar, .main::-webkit-scrollbar {
+    background-color: black;
+    width: 12px;
+}
+
+.container-playlist::-webkit-scrollbar-thumb, .main::-webkit-scrollbar-thumb {
+    background-color: #666666;
+}
+
 .clearfix::after {
     content: "";
     display: table;
@@ -73,7 +82,6 @@ body {
 
 .nav .bottom {
     height: 70px;
-    background-color: black;
 }
 
 .nav-icon {
@@ -119,8 +127,7 @@ body {
 
 #playlist {
     margin-top: 25px;
-    height: 80%;
-    overflow: hidden;
+    height: calc(100% - 70px);
 }
 
 #playlist h4 {
@@ -154,7 +161,7 @@ body {
 }
 
 .container-playlist {
-    height: 60%;
+    height: calc(60% - 70px);
     list-style: none;
     overflow-y: auto;
 }
@@ -524,5 +531,11 @@ body {
 
     .right i {
         margin-right: 15px;
+    }
+}
+
+@media screen and (max-height: 350px) {
+    .header {
+        display: none;
     }
 }
