@@ -61,7 +61,7 @@ body {
 /* barra navigazione laterale */
 .nav {
     width: 50px;
-    height: calc(100vh - 80px);
+    height: 100%;
     padding: 20px 20px 0px;
     background-color: black;
     color: #666666;
@@ -76,12 +76,12 @@ body {
 }
 
 .nav .up {
-    max-height: calc(100% - 70px);
+    height: calc(100% - 80px);
     min-height: 300px;
 }
 
 .nav .bottom {
-    height: 70px;
+    height: 80px;
 }
 
 .nav-icon {
@@ -176,7 +176,7 @@ body {
 }
 
 #nav-footer {
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .installa img {
